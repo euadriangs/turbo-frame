@@ -15,7 +15,14 @@ export const HERO_CAROUSEL_PRO_IMAGES: string[] = [
   "https://i.imgur.com/RG9m4bN.png",
 ];
 
+// Corrigido: Repetimos as imagens para garantir um loop contínuo em telas largas
 export const HERO_CAROUSEL_AMATEUR_IMAGES: string[] = [
+  "https://i.imgur.com/eHUjgiL.png",
+  "https://i.imgur.com/0sqK9bL.png",
+  "https://i.imgur.com/3BeCckx.png",
+  "https://i.imgur.com/eHUjgiL.png",
+  "https://i.imgur.com/0sqK9bL.png",
+  "https://i.imgur.com/3BeCckx.png",
   "https://i.imgur.com/eHUjgiL.png",
   "https://i.imgur.com/0sqK9bL.png",
   "https://i.imgur.com/3BeCckx.png",
