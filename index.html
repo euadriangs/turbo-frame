@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turbo Frame - Designs IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'scroll-left': 'scroll-left 30s linear infinite',
+            'scroll-right': 'scroll-right 30s linear infinite',
+            'scroll-up': 'scroll-up 40s linear infinite',
+            'scroll-down': 'scroll-down 40s linear infinite',
+          },
+          keyframes: {
+            'scroll-left': {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            'scroll-right': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+            'scroll-up': {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-100%)' },
+            },
+            'scroll-down': {
+              '0%': { transform: 'translateY(-100%)' },
+              '100%': { transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* O fundo base é preto, mas o conteúdo terá o fundo da imagem */
+      background-color: #000;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Usamos um pseudo-elemento para criar uma camada de fundo controlada */
+    body::before {
+        content: '';
+        position: fixed; /* Cobre toda a janela e não rola com a página */
+        inset: 0;
+        /* A mágica acontece aqui: aplicamos a imagem E uma camada preta com 85% de opacidade por cima dela */
+        background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://i.imgur.com/UMfu9Nc.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        z-index: -1; /* Posiciona esta camada atrás de todo o conteúdo */
+    }
+  </style>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+    }
+  }
+  </script>
+</head>
+
+<body class="text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
