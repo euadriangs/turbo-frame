@@ -39,6 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCTAClick }) => {
                                         src={src}
                                         alt="Exemplo de design profissional"
                                         className="h-32 md:h-44 object-contain rounded-md mx-2 flex-shrink-0"
+                                        fetchPriority="high"
                                     />
                                 ))}
                             </div>
@@ -55,6 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCTAClick }) => {
                                         src={src}
                                         alt="Exemplo de design amador"
                                         className="h-32 md:h-44 object-contain rounded-md mx-2 flex-shrink-0 filter grayscale"
+                                        fetchPriority="high"
                                     />
                                 ))}
                             </div>

@@ -22,7 +22,7 @@ const PortfolioSection: React.FC = () => {
             <motion.div 
               key={index} 
               variants={imageVariants}
-              className="aspect-[5/7] rounded-lg overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_theme(colors.green.500)]"
+              className="aspect-[5/7] rounded-lg overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_theme(colors.green.500)] bg-gray-900/50"
             >
               <img
                 src={src}
